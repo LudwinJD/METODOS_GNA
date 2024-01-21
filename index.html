@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Métodos de Generación de Números Aleatorios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Archivos de Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #212529;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        h2 {
+            padding-top: 10px;
+            color: #17a2b8;
+            text-align: center;
+        }
+
+        .carousel-inner>.carousel-item>img,
+        .carousel-inner>.carousel-item>a>img {
+            width: 100%;
+            max-height: 85vh;
+            margin: auto;
+            border: 1px solid #17a2b8;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            color: #17a2b8;
+        }
+
+        .carousel-caption {
+            bottom: 10%;
+        }
+
+        .container {
+            max-width: 90%;
+            border-radius: 10px;
+            padding: 2px;
+        }
+
+        .page-content {
+            text-align: center;
+        }
+
+        button.btn-success1 {
+            padding: 8px 16px;
+            background-color: #17a3b800;
+            color: #17a2b8;
+            border-color: #17a2b8;
+            cursor: pointer;
+        }
+
+        button.btn-success1:hover {
+            background-color: #17a2b8;
+            color: #ffffff;
+        }
+
+
+        button a {
+            color: #17a2b8;
+            text-decoration: none;
+        }
+
+        button a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .tit{
+            font-family: 'Courier New', monospace;
+            font-size: 48px;
+            color: #17a2b8;
+        }
+        .pfor {
+            font-family: 'Courier New', monospace;
+            font-size: 22px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="tit">MÉTODOS DE GENERACIÓN DE NÚMEROS ALAETORIOS</h2>
+
+    <div class="container">
+        <br>
+        <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <button data-bs-target="#carrusel" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#carrusel" data-bs-slide-to="1"></button>
+                <button data-bs-target="#carrusel" data-bs-slide-to="2"></button>
+                <button data-bs-target="#carrusel" data-bs-slide-to="3"></button>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/banner3.png" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="page-content">
+                            <h1 class="tit">Método Del Cuadrado Medio</h1>
+                            <p class="pfor"> Comienza con un número inicial (semilla). Este número es elevado al cuadrado. Se escogen
+                                los dígitos del medio de este nuevo número (según los dígitos que se deseen) y se
+                                colocan después del punto decimal. Este número conforma el primer número random.</p>
+                            <p class="pfor">
+                                La fórmula del método del cuadrado medio es:
+                                <br>
+                                X<sub>n+1</sub> = (X<sub>n</sub><sup>2</sup>) / 10<sup>d</sup>
+                            </p>
+                            <button class="btn-success1"><a href="Cuadrado_Medio.html">Ir a Cuadrado Medio</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="carousel-item">
+                    <img src="../img/banner3.png" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption">
+                        <div class="page-content">
+                            <h1 class="tit">Congruencia Lineal</h1>
+                            <p class="pfor">
+                                La congruencia lineal es un método popular para la generación de números aleatorios. Utiliza una relación 
+                                de recurrencia lineal para producir una secuencia de números, donde cada número depende del anterior a 
+                                través de una fórmula específica de congruencia.
+                            </p>
+                            <p class="pfor">
+                                La fórmula de congruencia lineal para la generación de números aleatorios es:
+                                <br>
+                                X<sub>n+1</sub> = (a * X<sub>n</sub> + c) mod m
+                            </p>
+                            <button class="btn-success1"><a href="Congruencia_Lineal.html">Ir a Congruencia
+                                    Lineal</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="carousel-item">
+                    <img src="../img/banner3.png" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption">
+                        <div class="page-content">
+                            <h1 class="tit">Congruencia Mixta</h1>
+                            <p class="pfor">
+                                El método congruencial mixto es otra variante del método congruencial utilizado para generar secuencias pseudoaleatorias.
+                            </p>
+                            <p class="pfor">
+                                La fórmula de congruencia mixta para la generación de números aleatorios es:
+                                <br>
+                                X<sub>n+1</sub> = (a * X<sub>n</sub> + c)  mod m
+                            </p>
+                            <button class="btn-success1"><a href="Congruencial_Mixto.html">Ir a Congruencial
+                                    Mixto</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="carousel-item">
+                    <img src="../img/banner3.png" class="d-block w-100" alt="Slide 4">
+                    <div class="carousel-caption">
+                        <div class="page-content">
+                            <h1 class="tit">Método Multiplicativo</h1>
+                            <p class="pfor">El método congruencial multiplicativo es un algoritmo utilizado para generar secuencias pseudoaleatorias. 
+                                Este tipo de secuencias son determinísticas y se generan a partir de una fórmula matemática, pero su comportamiento 
+                                se asemeja al de una secuencia de números aleatorios verdaderos.</p>
+                            <p class="pfor">
+                                La fórmula del método multiplicativo para la generación de números aleatorios es:
+                                <br>
+                                X<sub>n+1</sub> = (a * X<sub>n</sub>) mod m
+                            </p>
+                            <button class="btn-success1"><a href="Métodos _multiplicativos.html">Ir a Congruencial
+                                    multiplicativo</a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
